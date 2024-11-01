@@ -6,14 +6,15 @@
     <title>Atividade 1</title>
  
 </head>
-<body>
+<body id="corpo">
     <h1 id="saudacao"></h1>
+
     <script>
-     let nome =  prompt(" Digite o seu nome :" )
-     let corFavorita = prompt("Qual é a sua cor favorita?");
-     document.getElementById("saudacao").innerText = "Olá " + nome + "!";
-     document.getElementById("corpo").style.backgroundColor = corFavorita;
+        let nome = prompt("Qual é o seu nome?");
+        let corFavorita = prompt("Qual é a sua cor favorita?");
+
+        document.getElementById("saudacao").innerText = "Olá " + nome + "!";
+        document.getElementById("corpo").style.backgroundColor = corFavorita;
     </script>
-     
 </body>
 </html>
