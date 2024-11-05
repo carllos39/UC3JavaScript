@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="saida"></h1>
+    <p>  
+        <label for="">Informe o valor de custo</label>
+        <input type="text" id="custoFabrica">
+    </p>
+    <button onclick="calcular()">Calcular</button>
+    <script>
+        function calcular(){
+            let custoFabrica= document.getElementById("custoFabrica").value; 
+
+            let custoFinal=custoFabrica + (0.28 * custoFabrica) + (0.45 * custoFabrica);
+            custoFinal= custoFinal + (0.45 * custoFinal);
+            document.getElementById("saida ").innerText="custoFinal";
+        }
+    </script>
+</body>
+</html>
