@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //FOR, WHILE,DO..WHILE
+         let contador=0;
+/*
+         while(contador <=10){
+           console.log("Contagem em:" , contador);
+             contador ++;
+          }
+
+          for(let i=0;i <= 10;i++){
+             console.log("Contagem em:" , i);
+         }
+         */
+        // do {
+        //     console.log("Contagem Do While", contador);
+        //     contador ++;
+        // } while(contador < 6);
+    
+        let entrada = prompt("Digite algo (ou 'sair' para parar):");
+
+        while (entrada !== "sair") {
+            alert("Você digitou: " + entrada);
+            entrada = prompt("Digite algo (ou 'sair' para parar):");
+        }
+    </script>
+</body>
+</html>
