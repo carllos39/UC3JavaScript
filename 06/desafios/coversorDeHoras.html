@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Horas</title>
+</head>
+<body>
+    <h1>Conversor de Horas</h1>
+    <p>
+        Digite a quantidade de minutos :
+        <input type="text"  id="minutos">
+    </p>
+    <button onclick="calcularHoras()">Calcular</button>
+    <script>
+        tempo=0;
+        horas=0;
+        function calcularHoras(){
+            let minutos=document.getElementById("minutos").value;
+            let horas =Math.floor( minutos / 60);
+               tempo= minutos % 60;
+            document.getElementById("saida").innerText= " Horas " + horas + " e  Minutos " + tempo ;
+
+        }
+    </script>
+    <p id="saida"></p>
+</body>
+</html>
