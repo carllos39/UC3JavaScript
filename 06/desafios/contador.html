@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>
+        <label for="numero">Informe um número</label>
+        <input type="number" id="numero">
+    </p>
+    <button onclick="calcular()">Enviar</button>
+    <p id="saida"></p>
+    <script>
+        let contador=0;
+        function calcular(){
+            let numero=parseInt(document.getElementById("numero").value="");
+            for(let i =1;i <= 5;i++){
+             if(numero >= 0){
+                alert("positivo");
+                contador++;
+             }else{
+                alert("negativo")
+             }
+            }
+            document.getElementById("saida").innerText=`${contador}`;
+        }
+    </script>
+</body>
+</html>
