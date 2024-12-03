@@ -2,17 +2,35 @@
 <html>
 <body>
 
-<h1>Usando keypress</h1>
-
-<input type="text" id="demo">
-
+<h1>Atividade2</h1>
+<button id="botaoCor">Passe o mouse</button>
+<button id="mudarPorNome" onmouseover="colocarCor()" onmouseout="removerCor()">Passe o mouse aqui!</button>
+<button id="meEsconda">Me esconda</button>
 <script>
-    let contador=0;
-document.getElementById("demo").addEventListener("keypress", myFunction);
+const botao = document.getElementById("botaoCor");
+botao.onmouseover=function(){
 
-function myFunction() {
-  document.getElementById("demo").style.backgroundColor = "red";
 }
+botao.onmouseout= function(){
+
+}
+botao.style.backgroundColor = "yellow";
+
+
+const botaoPorNome= document.getElementById("mudarPorNome");
+
+function colocarCor(){
+  botaoPorNome.style.backgroundColor="green";
+}
+function removerCor(){
+  botaoPorNome.style.backgroundColor="";
+}
+
+
+document.getElementById("meEsconda").onmouseover = function() {
+            this.style.display = 'none';
+        }
+
 
 </script>
 

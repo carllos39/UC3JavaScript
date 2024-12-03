@@ -2,18 +2,28 @@
 <html>
 <body>
 
-<h1>Usando keypress</h1>
+<h1>Atividade3</h1>
 
-<input type="text" id="demo">
+<input type="text"  onkeydown=" mostrarTecla(event)" >
+<p id="teclaPressionada"></p>
+
+<input type="text" id="" >
 
 <script>
-    let contador=0;
-document.getElementById("demo").addEventListener("onkeydown", myFunction);
-
-function myFunction() {
-  document.getElementById("demo").style.backgroundColor = "red";
+function mostrarTecla(evento){
+document.getElementById("teclaPressionada").innerText="Tecla :"
++ evento.key;
 }
 
+// <input type="text" id="inputTextos">
+//     <p id="teclaPressionada"></p>
+
+    //  <script>
+    //      document.getElementById("inputTextos").onkeydown = function(evento) {
+    //         document.getElementById("teclaPressionada")
+    //             .innerText = "Tecla: " + evento.key;
+    //      }
+    //  </script>
 </script>
 
 </body>
