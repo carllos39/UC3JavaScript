@@ -6,17 +6,18 @@
     <title>Atividade4</title>
 </head>
 <body>
+   
     <button id="botaoContador">Clique aqui</button>
     <p id="exibirContagem">Cliques :0</p>
     <script>
+let contador=0;
 const botao=document.getElementById("botaoContador");
 botao.onclick=function(){
-    let contador=0;
+  
     contador++;
-    document.getElementById("exibirContagem").innerText="Cliques" + contador;
+    document.getElementById("exibirContagem").innerText = "Cliques" + contador;
   
 }
-</script>
-    
+</script>  
 </body>
 </html>
