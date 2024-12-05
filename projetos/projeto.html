@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+</head>
+<body>
+    <h1>Projeto</h1>
+    <div>
+        <label for="">Adicionar tarefa</label>
+        <input type="text" id="adicionar">
+    </div>
+    <button onclick="receberTarefa()">Enviar</button>
+    <script>
+        function receberTarefa(){
+            let adicionar = document.getElementById("adicionar");
+        
+        document.getElementById("saida").innerText= + ;
+        }
+    </script>
+    <p><input type="checkbox"  id="">tarefa<input type="checkbox" id="remover">remover</p>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>+</button>
+
+    <ul>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+        </li>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+        </li>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+        </li>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+        </li>
+    </ul>
+
+    <script>
+        let cont = 0;
+        document.querySelector("button").onclick = () => {
+            const chk = document.createElement("input");
+            chk.type = "checkbox";
+            chk.checked = cont % 2 == 0? true : false;
+            document.body.append(chk);
+            cont++;
+        }
+    </script>
+</body>
+</html> -->
