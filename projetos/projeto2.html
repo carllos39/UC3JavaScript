@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+</head>
+
+<body>
+    <h1>Projeto</h1>
+
+    <input type="text" id="adicionar" >
+    <button onclick="mostrarTecla()">Enviar</button>
+    <script>
+        function mostrarTecla() {
+            let adicionar=document.getElementById("adicionar").value;
+            document.getElementById("saida").innerText= "Tarefa : " + adicionar;
+        }
+    </script>
+    <ul>
+   <li>Atividade
+
+    <input type="checkbox" .(chk) id="saida">
+    <button>Remover</button>
+    
+    </li>
+    </ul>
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+>>>>>>> 34212d8f7487ec0650372b3f8dc9bf0202f8d662
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <input type="text">
     <button>+</button>
 
@@ -25,10 +60,35 @@
         <li>Atividade 1
             <input type="checkbox">
             <button><strong>🗑</strong></button>
+=======
+    <input type="text" id="enviaTarefa">
+    <button >Enviar</button>
+
+    <ul>
+        <li>Atividade 1
+            <input type="checkbox" id="chk">
+            <button>Remover</button>
+        </li>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+        </li>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+        </li>
+        <li>Atividade 1
+            <input type="checkbox">
+            <button>Remover</button>
+>>>>>>> 34212d8f7487ec0650372b3f8dc9bf0202f8d662
         </li>
     </ul>
 
     <script>
+<<<<<<< HEAD
+=======
+        let enviaTarefa=document.getElementById("enviaTarefa").value;
+>>>>>>> 34212d8f7487ec0650372b3f8dc9bf0202f8d662
         let cont = 0;
         document.querySelector("button").onclick = () => {
             const chk = document.createElement("input");
@@ -39,4 +99,8 @@
         }
     </script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html> 
+>>>>>>> 34212d8f7487ec0650372b3f8dc9bf0202f8d662
