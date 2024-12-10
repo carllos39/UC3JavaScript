@@ -1,46 +1,46 @@
-const terefaInput=document.getElementById("tarefaInput");
-const addBtn=document.getElementById("addBtn");
-const listaTarefas=document.getElementById("listaTarefas");
+const tarefaInput = document.getElementById("tarefaInput");
+const addBtn = document.getElementById("addBtn");
+const listaDeTarefas = document.getElementById("listaDeTarefas");
 
-addBtn.addEventListener("click", ()=>{
-if(terefaInput){
-    criarTarefa(terefaInput.value);
-    terefaInput.value="";
-    terefaInput.focus();
-}else{
-    alert("Digite uma terefa válida!");
-    terefaInput.focus();
-}
-});
+addBtn.addEventListener("click", () => {
+    if(tarefaInput.value) {
+        criarTarefa(tarefaInput.value);
+        tarefaInput.value = "";
+        tarefaInput.focus();
+    } else {
+        alert("Digite uma tarefa válida!");
+        tarefaInput.focus();
+    }
+})
 
-function criarTarefa(titulo){
-const li= document.createElement("li");
+function criarTarefa(titulo) {
+    const li = document.createElement("li");
 
     // Adicionar texto a uma tarefa
-const textoDaTarefa= document.createElement("span");
+    const textoDaTarefa = document.createElement("span");
+    textoDaTarefa.innerText = titulo;
 
-textoDaTarefa.innerText= titulo;
+    // Adicionar o Checkbox
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
 
-checkbox.type="checkbox";
-checkbox.addEventListener("change", ()=>{
+    checkbox.addEventListener("change", () => {
+        // li.classList.toggle("completed", checkbox.checked)
 
-    li.classList.toggle("completed", checkbox.checked);
+        // if(checkbox.checked) {
+        //     li.className = "completed";
+        // } else {
+        //     li.className = "";
+        // }
 
-    // if(checkbox.checked) {
-    //     li.className = "completed";
-    // } else {
-    //     li.className = "";
-    // }
+        if(checkbox.checked) {
+            li.classList.add("completed");
+        } else {
+            li.classList.remove("completed");
+        }
+    })
 
-    if( checkbox.checked){
-         li.classList.add("completed");
-       
-     }else{
-         li.classList.remove("completed");
-     }
-
-});
-li.append(checkbox)
-li.append(textoDaTarefa);
-listaTarefas.append(li);
+    li.append(checkbox);
+    li.append(textoDaTarefa);
+    listaDeTarefas.append(li);
 }
