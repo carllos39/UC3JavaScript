@@ -10,26 +10,29 @@
 <body>
     <h1>Projeto</h1>
 
-    <input type="text" id="adicionar" >
+    <input type="text" id="adicionar">
     <button onclick="mostrarTecla()">Enviar</button>
     <script>
-        function mostrarTecla() {
-            let adicionar=document.getElementById("adicionar").value;
-            document.getElementById("saida").innerText= "Tarefa : " + adicionar;
-        }
-    </script>
-    <ul>
-   <li>Atividade
 
-    <input type="checkbox" id="saida">
-    <button>Remover</button>
-    
-    </li>
-    </ul>
+        function mostrarTecla() {
+         
+            let adicionar = document.getElementById("adicionar").value;
+             let cont = 0;
+             const chk = document.createElement("input");
+             chk.type = "checkbox";
+             chk.checked = cont % 2 == 0 ? true : false;
+             document.body.append(chk);
+             cont++;
+            
+        document.getElementById("saida").innerText ="" + adicionar
+        }
+
+    </script>
+    <p id="saida"></p>
 </body>
 </html>
 <hr>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,4 +74,4 @@
         }
     </script>
 </body>
-</html> 
+</html>  -->

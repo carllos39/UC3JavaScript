@@ -108,6 +108,30 @@ pre code {
     background-color: inherit;
     color: #c6e4fd;
 }
+#tarefaInput{
+    border: 1px solid #ddd;
+    width: calc(100% - 110px);
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#addBtr{
+    padding: 10px;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#addBtr :hover{
+    background-color: darkgreen;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
 
 
 
