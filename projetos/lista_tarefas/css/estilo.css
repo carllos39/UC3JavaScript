@@ -7,36 +7,65 @@ body {
     justify-content: center;
 }
 
-.container{
+.container {
     max-width: 766px;
     min-width: 440px;
     width: 100%;
     padding: 20px;
-    border: 1px solid red;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0,0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-h1{
+
+h1 {
     text-align: center;
     color: #222;
 }
-ul{
-    list-style: none;
+
+#tarefaInput {
+    width: calc(100% - 110px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#addBtn {
+    padding: 10px;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: green;
+}
+
+ul {
+    list-style-type: none;
     padding: 0;
 }
-li{
+
+li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 10px 0;
     padding: 5px;
     background-color: #f4f4f4;
     border-radius: 4px;
-    box-shadow: 0 4px rgba(0, 0,0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 li button {
     background-color: #f44336;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
 
