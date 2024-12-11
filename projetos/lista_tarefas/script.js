@@ -39,8 +39,21 @@ function criarTarefa(titulo) {
             li.classList.remove("completed");
         }
     })
+    const removerBtn = document.createElement("button");
+    removerBtn.innerHTML="<strong>🗑</strong>"
+    removerBtn.addEventListener("click", ()=>{
+    listaDeTarefas.removeChild(li);
+    });
+    const divFlexLi = document.createElement("div");
+    divFlexLi.append(checkbox);
+    divFlexLi.append(textoDaTarefa);
 
     li.append(checkbox);
     li.append(textoDaTarefa);
     listaDeTarefas.append(li);
 }
+tarefaInput.addEventListener("keydown",(event)=>{
+if(event.key==="Enter"){
+    addBtn.click();
+}
+});
