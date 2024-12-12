@@ -37,7 +37,7 @@ body{
 .operador:hover{
     background-color: aqua;
 }
-.limpar{
+.limpar:hover{
     background-color: brown;
     border: white;
 }
