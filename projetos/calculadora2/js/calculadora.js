@@ -4,19 +4,20 @@ let numeroAtual ="";
 let operador ="";
 let numeroAnterior ="";
 
-function numero(numero) {
+function acresNumero(numero) {
     numeroAtual += numero;
     display.value = numeroAtual;
 }
 
 function operadores(op) {
-    if (numeroAtual === '') {
+    if (numeroAtual ==="") return ;
         numeroAnterior = numeroAtual;
         operador = op;
-        numeroAtual ='';
-
+        numeroAtual ="";
+     
+      
     }
-}
+
     function calculateResult() {
         if (numeroAnterior ==='' || numeroAtual==='') return;
         let result;
@@ -50,8 +51,8 @@ function operadores(op) {
 
 
 function clearDisplay(){
-    numeroAtual='';
-    numeroAnterior='';
-    operador='';
-    display.value='';
+    numeroAtual="";
+    numeroAnterior="";
+    operador="";
+    display.value="";
 }
