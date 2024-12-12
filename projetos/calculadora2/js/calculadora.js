@@ -1,23 +1,24 @@
 let display = document.getElementById("display");
 
-numeroAtual = "";
-operador = "";
-numeroAnterior = "";
+let numeroAtual ="";
+let operador ="";
+let numeroAnterior ="";
 
-function acrescentaNumero(numero) {
+function numero(numero) {
     numeroAtual += numero;
     display.value = numeroAtual;
 }
 
-function acrescentaOperador(op) {
+function operadores(op) {
     if (numeroAtual === '') {
         numeroAnterior = numeroAtual;
         operador = op;
-        numeroAtual = "";
+        numeroAtual ='';
 
     }
+}
     function calculateResult() {
-        if (numeroAnterior === '' || numeroAtual==='') return;
+        if (numeroAnterior ==='' || numeroAtual==='') return;
         let result;
 
         const num1 = parseFloat(numeroAnterior);
@@ -25,32 +26,32 @@ function acrescentaOperador(op) {
 
         switch (operador) {
             case '+':
-                num1 + num2;
+               result= num1 + num2;
                 break;
             case '-':
-                num1 - num2;
+                result= num1 - num2;
                 break;
             case '*':
-                num1 * num2;
+               result= num1 * num2;
                 break;
             case '/':
-                num1 / num2;
+               result= num1 / num2;
                 break;
             default:
                 return;
         }
      display.value = result;
-     numeroAtual = result.toSting();
-     operador= "";
-     numeroAnterior="";
+     numeroAtual = result.toString();
+     operador='';
+     numeroAnterior='';
 
     }
-}
+
 
 
 function clearDisplay(){
-    numeroAtual="";
-    numeroAnterior="";
-    operador="";
-    display.value="";
+    numeroAtual='';
+    numeroAnterior='';
+    operador='';
+    display.value='';
 }

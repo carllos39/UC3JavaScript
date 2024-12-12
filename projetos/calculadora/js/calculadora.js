@@ -8,15 +8,15 @@ function appendNumber(number){
     display.value = currentInput;
 }
 function appendOperator(op) {
-    if (currentInput === '') return;
+    if (currentInput ==='') return;
     firstOperand = currentInput;
     operator = op;
-    currentInput = "";
+    currentInput='';
 
 }
 
 function calculateResult() {
-    if (firstOperand === '' || currentInput === '') return;
+    if (firstOperand ==='' || currentInput ==='') return;
     let result;
 
     const num1 = parseFloat(firstOperand);
