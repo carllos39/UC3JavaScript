@@ -11,6 +11,7 @@ body{
     background-color: #f9f9f9;
     padding: 10px;
     cursor: pointer;
+   padding-top:50px ;
 }
 .card.selecionado {
     background-color: lightblue;
@@ -43,4 +44,9 @@ button{
 
 button:hover{
     opacity: 0.8;
+}
+.resultado{
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
 }
