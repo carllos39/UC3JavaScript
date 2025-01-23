@@ -1,5 +1,5 @@
 const cards=document.querySelectorAll(".card");
-const redefinir=document.getAnimations("redefinir");
+const redefinir=document.getElementById("redefinir");
 cards.forEach(card => {
     card.addEventListener("click", () => {
         card.classList.toggle("selecionado");
