@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.dark-mode {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleThemeBtn">Alterar Tema</button> 
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci debitis sunt ullam dolores amet dolor ipsa tempora nisi, optio soluta. Sequi temporibus doloremque perspiciatis maiores, veniam quos quibusdam quo atque?</p>
+    <script>
+          const toggleBtn = document.getElementById("toggleThemeBtn");
+          addEventListener("click", ()=>{
+            document.body.classList.toggle("dark-mode");
+          })
+    </script>
+</body>
+</html>

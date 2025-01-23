@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calculadora{
+ width: 220px;
+text-align: center;
+margin: 20px;
+padding: 5px;
+}
+.button{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    border-radius: 8px;
+    background-color: black;
+    padding: 5px;
+
+     
+    
+}
+input{
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex; 
+    justify-content: center;
+    height:40px;
+}
+.operador:hover{
+    background-color: aqua;
+}
+.limpar:hover{
+    background-color: brown;
+    border: white;
+}

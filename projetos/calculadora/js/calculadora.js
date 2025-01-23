@@ -1,52 +1,22 @@
-let display = document.getElementById("display");
-let currentInput = "";
-let operator = "";
-let firstOperand = ""; 
 
-function appendNumber(number){
-    currentInput += number;
-    display.value = currentInput;
-}
-function appendOperator(op) {
-    if (currentInput === '') return;
-    firstOperand = currentInput;
-    operator = op;
-    currentInput = "";
+const display=document.getElementById("display");
+buttons= document.querySelectorAll(".btn");
+const clearButton=document.getElementById("clear");
+const equalsButton=document.getElementById("equals");
 
-}
 
-function calculateResult() {
-    if (firstOperand === '' || currentInput === '') return;
-    let result;
+buttons.forEach(appendNumber =>{
+    appendNumber.addEventListener("click", ()=>{
+        display.value += appendNumber.getAttribute("data-value");
 
-    const num1 = parseFloat(firstOperand);
-    const num2 = parseFloat(currentInput);
+    });
 
-    switch (operator) {
-        case '+':
-            result = num1 + num2;
-            break;
-        case '-':
-            result = num1 - num2;
-            break;
-        case '*':
-            result = num1 * num2;
-            break;
-        case '/':
-            result = num1 / num2;
-            break;
-            default:
-            return;
-    }
-    display.value = result;
-    currentInput= result.toString();
-    operator='';
-    firstOperand='';
-}
+});
 
-function clearDisplay(){
-    currentInput='';
-    operator ='';
-    firstOperand='';
-    display.value='';
-}
+clearButton.addEventListener("click", ()=>{
+    display.value="";
+});
+
+equalsButton.addEventListener("click", ()=>{
+    display.value= eval(display.value);
+});
