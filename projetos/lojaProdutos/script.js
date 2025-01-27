@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.card');
 const btnRedefinir = document.getElementById('btnRedefinir');
 const btnComprar = document.getElementById('btnComprar');
 const resultado = document.getElementById('resultado');
-const telefoneDoWhatsapp = "5511948325592";
+const telefoneDoWhatsapp = "5511948887050";
 const whatsappLink = document.getElementById("whatsappLink");
 
 cards.forEach(card => {
