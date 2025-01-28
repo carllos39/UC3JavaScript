@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.card');
+let quantidade = document.getElementById('quantidade');
 const btnRedefinir = document.getElementById('btnRedefinir');
 const btnComprar = document.getElementById('btnComprar');
 const resultado = document.getElementById('resultado');
@@ -28,10 +29,13 @@ btnComprar.addEventListener("click", () => {
             card.style.display = "none";
         } else {
             listaProdutos.push(
-                card.querySelector("div:first-child").textContent + " R$ $" + card.dataset.preco);
+                card.querySelector("div:first-child").textContent + " R$ $" + card.dataset.preco );
             precoTotal += parseFloat(card.dataset.preco);
         }
     });
+    function calcular(data-preco,quantidade){
+   data-preco * quantidade;
+    }
     resultado.innerText = `Preço Total R$ ${precoTotal}`;
 
     const mensagem = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}\n\n Preço Total R$ ${precoTotal}`);
