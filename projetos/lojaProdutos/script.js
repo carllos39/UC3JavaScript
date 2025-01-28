@@ -1,10 +1,14 @@
 const cards = document.querySelectorAll('.card');
-let quantidade = document.getElementById('quantidade');
+
 const btnRedefinir = document.getElementById('btnRedefinir');
 const btnComprar = document.getElementById('btnComprar');
 const resultado = document.getElementById('resultado');
 const telefoneDoWhatsapp = "5511948887050";
 const whatsappLink = document.getElementById("whatsappLink");
+
+// function calcular(preco,quantidade){
+//    preco * quantidade;
+//      }
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -21,22 +25,21 @@ cards.forEach(card => {
 })
 
 btnComprar.addEventListener("click", () => {
+    let quantidade =parseFloat( document.getElementById('quantidade'));
     let precoTotal = 0;
-    let listaProdutos = [];
-
+    let listaProdutos = [] ;
+  
     cards.forEach(card => {
         if(!card.classList.contains("selecionado")) {
             card.style.display = "none";
         } else {
             listaProdutos.push(
                 card.querySelector("div:first-child").textContent + " R$ $" + card.dataset.preco );
-            precoTotal += parseFloat(card.dataset.preco);
+            precoTotal  +=  parseFloat(card.dataset.preco);
         }
     });
-    function calcular(data-preco,quantidade){
-   data-preco * quantidade;
-    }
-    resultado.innerText = `Preço Total R$ ${precoTotal}`;
+
+    resultado.innerText = `Preço Total R$  ${precoTotal }`;
 
     const mensagem = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}\n\n Preço Total R$ ${precoTotal}`);
 
