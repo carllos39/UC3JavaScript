@@ -25,7 +25,7 @@ cards.forEach(card => {
 })
 
 btnComprar.addEventListener("click", () => {
-    let quantidade =parseFloat( document.getElementById('quantidade'));
+    let quantidade = parseFloat( document.getElementById('quantidade'));
     let precoTotal = 0;
     let listaProdutos = [] ;
   
