@@ -21,12 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     fecharPainel.addEventListener("click", () => {
         painel.style.right = "-250px";
     });
-    
-});
 
-  
-
-  // Slider Automático
+      // Slider Automático
   const slides = document.querySelector(".slides");
   let index = 0;
 
@@ -36,6 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setInterval(mudarSlide, 4000);
+
+    
+});
+
+  
+
 
 
  
