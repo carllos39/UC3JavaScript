@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slides.style.transform = `translateX(-${index * 100}%)`;
   }
 
-  setInterval(mudarSlide, 4000);
+  setInterval(mudarSlide, 3000);
 
     
 });
